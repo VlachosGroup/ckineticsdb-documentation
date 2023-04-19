@@ -6,6 +6,8 @@ This document covers the commands to run the top-level functions of CKineticsDB
 
 Double-clicking on the desktop application icon will launch the Graphical User Interface (GUI) by default. The GUI can perform all the tasks which can be done by the Command Line Interface (CLI).
 
+<ins>Note</ins>: For MacOS, the Desktop Application cannot run by double-clicking. Follow the instructions in the next section to run the application on MacOS
+
 ## Command Line Interface
 
 •	Open the shell.
@@ -13,6 +15,17 @@ Double-clicking on the desktop application icon will launch the Graphical User I
 •	Navigate to the directory containing the CKineticsDB application.
 
 •	Run any of the following commands to start.
+
+<ins>Note</ins>: The following documentation uses a generic application name 'ckineticsdb'. Users should use the application name with the appropriate extension as available for their OS.
+
+
+```python
+ckineticsdb
+```
+
+OUTPUT:
+
+Starts the graphical user interface. Same functions as double-clicking the desktop application.
 
 
 ```python

@@ -22,17 +22,21 @@ docker load --input ../ckineticsdb-datahub.tar
 
 3.	**Running the Container for the first time**:
 
-When running the container for the first time, the data to be injected into MongoDB can be specified as explained below. Open the shell / command prompt and run the mentioned commands:
+When running the container for the first time, the data to be injected into MongoDB can be specified as explained below. Open the shell / command prompt and run the mentioned commands.
 
-3.1.	<ins>Inject the default sample data dump</ins> available on https://files.ccei.udel.edu/p/CKineticsDB/data/ 
+    3.1. Inject the default sample data dump available on https://files.ccei.udel.edu/p/CKineticsDB/data/ 
+    3.2. Inject a desired data dump available on https://files.ccei.udel.edu/p/CKineticsDB/data/
+    3.3. Inject a data dump available locally on the host machine
+
+## Inject the default sample data dump 
 
     Dataset name: ckineticsdb-demo.mdarc.gz
+    Available on https://files.ccei.udel.edu/p/CKineticsDB/data/ 
 
 
 ```python
 docker run --name ckineticsdb-db -p 27017:27017 ckineticsdb-datahub:latest
 ```
-
 
    Running this will download the default sample dataset and restore it in the MongoDB datahub inside the container.
 
@@ -41,9 +45,10 @@ docker run --name ckineticsdb-db -p 27017:27017 ckineticsdb-datahub:latest
        --name ckineticsdb-db: specifies name of the container
        -p 27017:27107: Publishes port 27017 of the container and binds it to the port 27017 of the host
 
-   3.2.	<ins>Inject a desired data dump</ins> available on https://files.ccei.udel.edu/p/CKineticsDB/data/
+## Inject a desired data dump
 
-   For example, dataset name: ckineticsdb-all.demo.mdarc.gz
+    For example, Dataset name: ckineticsdb-all.demo.mdarc.gz
+    Available on https://files.ccei.udel.edu/p/CKineticsDB/data/
 
 
 ```python
@@ -58,12 +63,11 @@ Explanation:
     -p 27017:27107: Publishes port 27017 of the container and binds it to the port 27017 of the host
     -e CKINETICSDB_ARCHIVE_URL=<URL of desired dataset>: updates the default value of the environment variable inside the docker container with the specific URL
 
-3.3.	<ins>Inject a data dump available locally on the host machine</ins>:
+## Inject a data dump available locally on the host machine
 
 This data dump can be either a manually downloaded data dump from the provided data download URL or a back-up created from the Docker-based MongoDB datahub provided by CKineticsDB.
 
-For example, dataset name: ckineticsdb-old.mdarc.gz
-
+    For example, dataset name: ckineticsdb-old.data.gz
 
 
 ```python
@@ -84,7 +88,7 @@ Now, the path to the data dump inside the Docker container needs to be specified
 
 -e CKINETICSDB_ARCHIVE=<path of data dump inside the Docker container>: updates the default value of the environment variable inside the docker container with the specific path
 
-4.	**Starting the container after the first run**:
+## Starting the container after the first run
 
 When the container is run the first time, the specified data is downloaded and injected into the MongoDB database inside the container and stays persistent as long as the container is not deleted. Even if Docker is not running, the container and the data inside it will stay persistent. Thus, the data download only happens when the container is run for the first time. More data can be added to the datahub using the data upload features of CKineticsDB and the container can be used as a local database for managing users’ data locally. 
 
