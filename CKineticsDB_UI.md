@@ -6,7 +6,9 @@ This document covers the commands to run the top-level functions of CKineticsDB
 
 Double-clicking on the desktop application icon will launch the Graphical User Interface (GUI) by default. The GUI can perform all the tasks which can be done by the Command Line Interface (CLI).
 
-<ins>Note</ins>: For MacOS, the Desktop Application cannot run by double-clicking. Follow the instructions in the next section to run the application on MacOS
+<ins>Note 1</ins>: For MacOS, the Desktop Application cannot run by double-clicking. Follow the instructions in the next section to run the application on MacOS
+
+<ins>Note 2</ins>: For Ubuntu, if the complete application (GUI+CLI) gives conflicts with the pre-installed libraries in a specific Linux OS distribution, and they are not easily resolvable, we have also provided a separate CLI-only application for Ubuntu. The CLI application has all the features of the GUI and can be used as shown in the CLI-specific documentation below. 
 
 ## Command Line Interface
 

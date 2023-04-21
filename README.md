@@ -22,8 +22,8 @@ CKineticsDB is a part of the Virtual Kinetics Laboratory (VLab) Software Ecosyst
 The above link contains the following data dumps generated from MongoDB using mongodump
 
 Contents of the ‘latest’ directory:
-- ckineticsdb-demo.mdarc.gz: contains one dataset to try CKineticsDB software before downloading the large complete data dump
-- ckineticsdb-all.mdarc.gz: contains the entire CKineticsDB datahub data  
+- ckineticsdb-demo.data.gz: contains one dataset to try CKineticsDB software before downloading the large complete data dump
+- ckineticsdb-all.data.gz: contains the entire CKineticsDB datahub data  
 
 Old versions of the data dump are also available based on the date they were archived.
 
@@ -33,6 +33,6 @@ Old versions of the data dump are also available based on the date they were arc
 Accessing the software components requires user credentials. These can be obtained by reaching out to vkineticslab@udel.edu .
 
 The above link contains the following software components:
-- Docker container which runs a MongoDB server. It automatically downloads into the container the ckineticsdb-demo.mdarc.gz data dump by default. This can be overridden to download other datasets in the  https://files.ccei.udel.edu/p/CKineticsDB/data/ repository or plug in an already downloaded locally available data dump from CKineticsDB.
+- Docker container which runs a MongoDB server. It automatically downloads into the container the ckineticsdb-demo.data.gz data dump by default. This can be overridden to download other datasets in the  https://files.ccei.udel.edu/p/CKineticsDB/data/ repository or plug in an already downloaded locally available data dump from CKineticsDB.
 - Desktop application to be used either as a graphical user interface or a command line interface. The application automatically connects to the MongoDB server in the shared Docker container.
 - Necessary files and templates to use CKineticsDB.

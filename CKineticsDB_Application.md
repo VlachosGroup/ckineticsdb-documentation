@@ -14,6 +14,6 @@ Extract the zipped folder into an empty directory. The extracted folder should h
 
 3. download.json: template file for specifying data download instructions when using the command line interface
 
-4. readMe.txt file
+4. readme.txt
 
 Details about using the application are provided in the [CKineticsDB User Interface](https://github.com/siddhantlambor/ckineticsdb-documentation/blob/main/CKineticsDB_UI.md) details document

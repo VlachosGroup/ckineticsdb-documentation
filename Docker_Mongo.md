@@ -1,7 +1,7 @@
 # Running the MongoDB datahub
 
 1. **Docker Image**:
-Download the Docker image ‘ckineticsdb-datahub.tar’ from the software download path specified on the main page
+Download the Docker image ‘ckineticsdb-database.tar’ from the software download path specified on the main page
 
 
 2.	**Load Image**:
@@ -12,33 +12,36 @@ Download the Docker image ‘ckineticsdb-datahub.tar’ from the software downlo
 
 
 ```python
-docker load --input ../ckineticsdb-datahub.tar
+docker load --input ../ckineticsdb-database.tar
 ```
 
-    Use the appropriate path to the ckineticsdb-datahub.tar file.
+Use the appropriate path to the ckineticsdb-database.tar file.
 
-    •	Check if the image (ckineticsdb-datahub:latest) is seen in Docker Desktop --> Images
-
+Check if the image (ckineticsdb-database:latest) is seen in Docker Desktop --> Images
 
 3.	**Running the Container for the first time**:
 
-When running the container for the first time, the data to be injected into MongoDB can be specified as explained below. Open the shell / command prompt and run the mentioned commands.
-
-    3.1. Inject the default sample data dump available on https://files.ccei.udel.edu/p/CKineticsDB/data/ 
+When running the container for the first time, the data to be injected into MongoDB can be specified as per location of the data:
+    
+    3.1. Inject the default (latest) sample data dump available on https://files.ccei.udel.edu/p/CKineticsDB/data/ 
     3.2. Inject a desired data dump available on https://files.ccei.udel.edu/p/CKineticsDB/data/
     3.3. Inject a data dump available locally on the host machine
+    
+Open the shell / command prompt and run the respective commands to inject the desired data dump. These are explained below in detail for each of the above mentioned data locations.
 
-## Inject the default sample data dump 
+<ins>Note</ins>: We recommend testing the entire workflow (software application and docker-Mongo database) and software features using the 'ckineticsdb-demo.data.gz' data first. It is a much smaller data dump so it downloads and loads into Docker fast. This will help to ensure that all the components are properly installed and working.
 
-    Dataset name: ckineticsdb-demo.mdarc.gz
+## Inject the default (latest) sample data dump 
+
+    Dataset name: ckineticsdb-demo.data.gz
     Available on https://files.ccei.udel.edu/p/CKineticsDB/data/ 
 
 
 ```python
-docker run --name ckineticsdb-db -p 27017:27017 ckineticsdb-datahub:latest
+docker run --name ckineticsdb-db -p 27017:27017 ckineticsdb-database:latest
 ```
 
-   Running this will download the default sample dataset and restore it in the MongoDB datahub inside the container.
+   Running this will download the default (latest) sample dataset and restore it in the MongoDB database inside the container.
 
    Explanation:
    
@@ -47,15 +50,15 @@ docker run --name ckineticsdb-db -p 27017:27017 ckineticsdb-datahub:latest
 
 ## Inject a desired data dump
 
-    For example, Dataset name: ckineticsdb-all.demo.mdarc.gz
+    For example, Dataset name: ckineticsdb-all.data.gz
     Available on https://files.ccei.udel.edu/p/CKineticsDB/data/
 
 
 ```python
-docker run -e CKINETICSDB_ARCHIVE_URL=https://files.ccei.udel.edu/p/CKineticsDB/data/latest/ckineticsdb-all.mdarc.gz --name ckineticsdb-db -p 27017:27017 ckineticsdb-datahub:latest
+docker run -e CKINETICSDB_ARCHIVE_URL=https://files.ccei.udel.edu/p/CKineticsDB/data/latest/ckineticsdb-all.data.gz --name ckineticsdb-db -p 27017:27017 ckineticsdb-database:latest
 ```
 
-Running this will download the specified dataset at the URL and restore it in the MongoDB datahub inside the container.
+Running this will download the specified dataset at the URL and restore it in the MongoDB database inside the container.
 
 Explanation:
 
@@ -65,16 +68,16 @@ Explanation:
 
 ## Inject a data dump available locally on the host machine
 
-This data dump can be either a manually downloaded data dump from the provided data download URL or a back-up created from the Docker-based MongoDB datahub provided by CKineticsDB.
+This data dump can be either a manually downloaded data dump from the provided data download URL or a back-up created from the Docker-based MongoDB database provided by CKineticsDB.
 
     For example, dataset name: ckineticsdb-old.data.gz
 
 
 ```python
-docker run --name ckineticsdb-db -v ../Desktop/backup:/tmp/backup -e CKINETICSDB_ARCHIVE=/tmp/backup/ckineticsdb-old.mdarc.gz -p 27017:27017 ckinetics-datahub:latest
+docker run --name ckineticsdb-db -v ../Desktop/backup:/tmp/backup -e CKINETICSDB_ARCHIVE=/tmp/backup/ckineticsdb-old.data.gz -p 27017:27017 ckinetics-database:latest
 ```
 
-Running this will use the specified dataset from the local user’s machine and restore it in the MongoDB datahub inside the container.
+Running this will use the specified dataset from the local user’s machine and restore it in the MongoDB database inside the container.
 
 
 Explanation:
@@ -82,15 +85,15 @@ Explanation:
     --name ckineticsdb-db: specifies name of the container
     -p 27017:27107: Publishes port 27017 of the container and binds it to the port 27017 of the host
 
-In this case, a local directory needs to be attached to the docker container. This directory should contain the data dump to be injected into MongoDB inside the container. This is achieved with the flag “-v ../Desktop/backup:/tmp/backup” in the above command. Here, the local directory ‘Desktop/backup’ contains the data dump ‘ckineticsdb-old.mdarc.gz’. This directory is mapped to the directory “/tmp/backup” inside the docker container. 
+In this case, a local directory needs to be attached to the docker container. This directory should contain the data dump to be injected into MongoDB inside the container. This is achieved with the flag “-v ../Desktop/backup:/tmp/backup” in the above command. Here, the local directory ‘Desktop/backup’ contains the data dump ‘ckineticsdb-old.data.gz’. This directory is mapped to the directory “/tmp/backup” inside the docker container. 
 
-Now, the path to the data dump inside the Docker container needs to be specified using an environment variable used in the command above as “CKINETICSDB_ARCHIVE=/tmp/backup/ckineticsdb-old.mdarc.gz” and explained below:
+Now, the path to the data dump inside the Docker container needs to be specified using an environment variable used in the command above as “CKINETICSDB_ARCHIVE=/tmp/backup/ckineticsdb-old.data.gz” and explained below:
 
 -e CKINETICSDB_ARCHIVE=<path of data dump inside the Docker container>: updates the default value of the environment variable inside the docker container with the specific path
 
 ## Starting the container after the first run
 
-When the container is run the first time, the specified data is downloaded and injected into the MongoDB database inside the container and stays persistent as long as the container is not deleted. Even if Docker is not running, the container and the data inside it will stay persistent. Thus, the data download only happens when the container is run for the first time. More data can be added to the datahub using the data upload features of CKineticsDB and the container can be used as a local database for managing users’ data locally. 
+When the container is run the first time, the specified data is downloaded and injected into the MongoDB database inside the container and stays persistent as long as the container is not deleted. Even if Docker is not running, the container and the data inside it will stay persistent. Thus, the data download and injection only happens when the container is run for the first time. This first run can take upto ~20 minutes to upload the ckineticsdb-all.data.gz data dump. More data can be added to the datahub using the data upload features of CKineticsDB and the container can be used as a local database for managing users’ data locally. 
 
 To restart the container, follow the following steps:
 
@@ -133,23 +136,23 @@ where, CONTAINER is the name of the container to launch a bash shell in
 
 
 ```python
-mongodump -u USERNAME -p PASSWORD --db=ckineticsdb --archive=/tmp/backup.mdarc.gz --gzip  mongodb://localhost/ckineticsdb
+mongodump -u USERNAME -p PASSWORD --db=ckineticsdb --archive=/tmp/backup.data.gz --gzip  mongodb://localhost/ckineticsdb
 ```
 
 where,
-USERNAME = username provided with the database credentials
-PASSWORD = password provided with the database credentials
---archive=/tmp/backup.mdarc.gz: specified the location and name of the file in which the database contents are stored
---gzip: compresses the data dump 
-mongodb://localhost/ckineticsdb: connection string for the MongoDB instance
+    
+    USERNAME = username provided with the database credentials
+    PASSWORD = password provided with the database credentials
+    --archive=/tmp/backup.data.gz: specified the location and name of the file in which the database contents are stored
+    --gzip: compresses the data dump 
+    mongodb://localhost/ckineticsdb: connection string for the MongoDB instance
 
 
-- The above command will create a file named ‘backup.mdarc.gz’ in the directory /tmp/ inside the docker container.
+- The above command will create a file named ‘backup.data.gz’ in the directory /tmp/ inside the docker container.
 
 **To copy the data dump file from the container to the host:**
 
 - Open a shell / command prompt and run the command:
-
 
 
 ```python
