@@ -111,7 +111,7 @@ where, CONTAINER is the name of the container which needs to be started.
 Alternatively, users can also use the Docker Desktop Application to start a container as explained below:
 Open Docker Desktop; Navigate to ‘Containers’; Select the Container name; Click on the start icon at the top.
 
-<img src="https://github.com/siddhantlambor/ckineticsdb-documentation/blob/main/images/docker%20container%20start.PNG"/>
+<img src="https://github.com/VlachosGroup/ckineticsdb-documentation/blob/main/images/docker%20container%20start.PNG?raw=true"/>
 
 # Backup of the Uploaded Data
 

@@ -58,7 +58,7 @@ Two quality assessment files will be generated in the parent project directory:
 
 --dataset: Absolute path to the parent directory containing DFT calculations for quality assessment. Parent project directory should have the hierarchy: 
 
-<img src="https://github.com/siddhantlambor/ckineticsdb-documentation/blob/main/images/hierarchy.png"/>
+<img src="https://github.com/VlachosGroup/ckineticsdb-documentation/blob/main/images/hierarchy.png?raw=true"/>
 
 Any sub-directories inside the “DFT” directory can be identified as DFT calculations performed using VASP or Gaussian software.
 

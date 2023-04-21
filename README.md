@@ -2,7 +2,7 @@
 
 The Chemical Kinetics Database (CKineticsDB) provides simulation data associated with multiscale modeling in heterogeneous catalysis. It provides data at three scales: ab-initio calculations, thermochemistry, and microkinetic models.
 
-<img src="https://github.com/siddhantlambor/ckineticsdb-documentation/blob/main/images/overview.PNG"/>
+<img src="https://github.com/VlachosGroup/ckineticsdb-documentation/blob/main/images/overview.PNG?raw=true"/>
 
 CKineticsDB stores the unaltered, curated simulation files from the multiscale modeling workflow at three scales: (1) electronic structure calculations (DFT) input and output; (2) statistical mechanics input and thermochemistry output; and (3) microkinetic modeling (MKM) input data.
 
