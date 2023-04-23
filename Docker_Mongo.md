@@ -23,13 +23,13 @@ Check if the image (ckineticsdb-database:latest) is seen in Docker Desktop --> I
 
 When running the container for the first time, the data to be injected into MongoDB can be specified as per location of the data:
     
-    3.1. Inject the default (latest) sample data dump available on https://files.ccei.udel.edu/p/CKineticsDB/data/ 
+    3.1. Inject the default (latest: 'ckineticsdb-demo.data.gz') sample data dump available on https://files.ccei.udel.edu/p/CKineticsDB/data/ 
     3.2. Inject a desired data dump available on https://files.ccei.udel.edu/p/CKineticsDB/data/
     3.3. Inject a data dump available locally on the host machine
 
 Open the shell / command prompt and run the respective commands to inject the desired data dump. These are explained below in detail for each of the above mentioned data locations.
 
-Keep the container running. This acts as a MongoDB server. Once the container is running, download and launch the [CKineticsDB Application](https://github.com/VlachosGroup/ckineticsdb-documentation/blob/main/CKineticsDB_Application.md)
+Keep the container running. This acts as a MongoDB server. Once the container is running, launch the [CKineticsDB Application](https://github.com/VlachosGroup/ckineticsdb-documentation/blob/main/CKineticsDB_Application.md)
 
 <ins>Note</ins>: For quick installation and testing of all the software components, we recommend working with the 'ckineticsdb-demo.data.gz' data first.
 
@@ -43,7 +43,7 @@ Keep the container running. This acts as a MongoDB server. Once the container is
 docker run --name ckineticsdb-db -p 27017:27017 ckineticsdb-database:latest
 ```
 
-   Running this will download the default (latest) sample dataset and restore it in the MongoDB database inside the container.
+   Running this will download the default (latest: 'ckineticsdb-demo.data.gz') sample dataset and restore it in the MongoDB database inside the container.
 
    Explanation:
    
