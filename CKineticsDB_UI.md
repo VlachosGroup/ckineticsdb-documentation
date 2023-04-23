@@ -161,4 +161,4 @@ ii.	Making selections:
 
 ### Note: 
 The MS Excel file is provided for human users to perceive the stored data and make selections manually.
-The JSON file can be used by other software / scripts to read metadata and make selections. If using a JSON metadata file, the workflow should follow the same general instructions as mentioned in this document. A sample workflow to make selections using python is shown in the documentation file named [readJSONmetadata.md](https://github.com/siddhantlambor/ckineticsdb-documentation/blob/main/readJSONmetadata.md)
+The JSON file can be used by other software / scripts to read metadata and make selections. If using a JSON metadata file, the workflow should follow the same general instructions as mentioned in this document. A sample workflow to make selections using python is shown in the documentation file named [readJSONmetadata.md](https://github.com/VlachosGroup/ckineticsdb-documentation/blob/main/readJSONmetadata.md)

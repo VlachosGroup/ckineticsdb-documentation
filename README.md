@@ -8,8 +8,8 @@ CKineticsDB stores the unaltered, curated simulation files from the multiscale m
 
 **Getting Started:**
 1.	Install Docker as per the instructions given on the [Docker website](https://docs.docker.com/get-docker/). 
-2. 	Download and start the Docker-based MongoDB database as per [instructions](https://github.com/siddhantlambor/ckineticsdb-documentation/blob/main/Docker_Mongo.md).
-3. Download and launch the CKineticsDB desktop application as per the [instructions](https://github.com/siddhantlambor/ckineticsdb-documentation/blob/main/CKineticsDB_Application.md).
+2. 	Download and start the Docker-based MongoDB database as per [instructions](https://github.com/VlachosGroup/ckineticsdb-documentation/blob/main/Docker_Mongo.md).
+3. Download and launch the CKineticsDB desktop application as per the [instructions](https://github.com/VlachosGroup/ckineticsdb-documentation/blob/main/CKineticsDB_Application.md).
 
 CKineticsDB is a part of the Virtual Kinetics Laboratory (VLab) Software Ecosystem developed by Vlachos Group at the University of Delaware as a part of the RAPID Reaction Software Ecosystem. Information on other tools in VLab can be found at the [Delaware Energy Institute's RAPID Site](https://dei.udel.edu/rapid/rapid-research/rapid-reaction-software-ecosystem/)
 
