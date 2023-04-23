@@ -26,10 +26,12 @@ When running the container for the first time, the data to be injected into Mong
     3.1. Inject the default (latest) sample data dump available on https://files.ccei.udel.edu/p/CKineticsDB/data/ 
     3.2. Inject a desired data dump available on https://files.ccei.udel.edu/p/CKineticsDB/data/
     3.3. Inject a data dump available locally on the host machine
-    
+
 Open the shell / command prompt and run the respective commands to inject the desired data dump. These are explained below in detail for each of the above mentioned data locations.
 
-<ins>Note</ins>: We recommend testing the entire workflow (software application and docker-Mongo database) and software features using the 'ckineticsdb-demo.data.gz' data first. It is a much smaller data dump so it downloads and loads into Docker fast. This will help to ensure that all the components are properly installed and working.
+Keep the container running. This acts as a MongoDB server. Once the container is running, download and launch the [CKineticsDB Application](https://github.com/VlachosGroup/ckineticsdb-documentation/blob/main/CKineticsDB_Application.md)
+
+<ins>Note</ins>: For quick installation and testing of all the software components, we recommend working with the 'ckineticsdb-demo.data.gz' data first.
 
 ## Inject the default (latest) sample data dump 
 
