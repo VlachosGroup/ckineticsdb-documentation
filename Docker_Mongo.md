@@ -76,7 +76,7 @@ This data dump can be either a manually downloaded data dump from the provided d
 
 
 ```python
-docker run --name ckineticsdb-db -v ../Desktop/backup:/tmp/backup -e CKINETICSDB_ARCHIVE=/tmp/backup/ckineticsdb-old.data.gz -p 27017:27017 ckinetics-database:latest
+docker run --name ckineticsdb-db -v ../Desktop/backup:/tmp/backup -e CKINETICSDB_ARCHIVE=/tmp/backup/ckineticsdb-old.data.gz -p 27017:27017 ckineticsdb-database:latest
 ```
 
 Running this will use the specified dataset from the local user’s machine and restore it in the MongoDB database inside the container.
