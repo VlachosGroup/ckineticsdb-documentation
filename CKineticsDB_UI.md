@@ -24,6 +24,8 @@ Ubuntu and Mac users may need to use a preceeding './' before the application na
 
 For example: ./CKineticsDB gui
 
+**Commands**
+
 
 ```python
 ckineticsdb
