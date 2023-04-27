@@ -29,7 +29,7 @@ Old versions of the data dump are also available based on the date they were arc
 
 ### B.	Software
 
-Latest release: 04/28/2023 (Corrected MacOS Application)
+Latest release: 04/27/2023 (Corrected MacOS Application)
 
 <ins>Download from:</ins> https://files.ccei.udel.edu/p/CKineticsDB/sw/ 
 
