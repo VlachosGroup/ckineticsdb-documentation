@@ -28,6 +28,9 @@ Contents of the ‘latest’ directory:
 Old versions of the data dump are also available based on the date they were archived.
 
 ### B.	Software
+
+Latest release: 04/27/2023 (Corrected MacOS Application)
+
 <ins>Download from:</ins> https://files.ccei.udel.edu/p/CKineticsDB/sw/ 
 
 Accessing the software components requires user credentials. These can be obtained by reaching out to vkineticslab@udel.edu .

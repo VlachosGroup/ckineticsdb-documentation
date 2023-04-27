@@ -20,6 +20,10 @@ Double-clicking on the desktop application icon will launch the Graphical User I
 
 <ins>Note</ins>: The following documentation uses a generic application name 'ckineticsdb'. Users should use the application name with the appropriate extension as available for their OS.
 
+Ubuntu and Mac users may need to use a preceeding './' before the application name when using the command line.
+
+For example: ./CKineticsDB gui
+
 
 ```python
 ckineticsdb
