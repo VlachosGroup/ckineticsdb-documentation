@@ -13,6 +13,9 @@ CKineticsDB stores the unaltered, curated simulation files from the multiscale m
 
 CKineticsDB is a part of the Virtual Kinetics Laboratory (VLab) Software Ecosystem developed by Vlachos Group at the University of Delaware as a part of the RAPID Reaction Software Ecosystem. Information on other tools in VLab can be found at the [Delaware Energy Institute's RAPID Site](https://dei.udel.edu/rapid/rapid-research/rapid-reaction-software-ecosystem/)
 
+### Citing this work
+Please use the paper at: https://pubs.acs.org/doi/10.1021/acs.jcim.3c00123 
+
 
 ## CKineticsDB components for download
 
