@@ -20,6 +20,7 @@ Please use the paper at: https://pubs.acs.org/doi/10.1021/acs.jcim.3c00123
 ## CKineticsDB components for download
 
 ### A.	Data
+
 <ins>Download from</ins>: https://files.ccei.udel.edu/p/CKineticsDB/data/ 
 
 The above link contains the following data dumps generated from MongoDB using mongodump
@@ -32,7 +33,7 @@ Old versions of the data dump are also available based on the date they were arc
 
 ### B.	Software
 
-Latest release: 04/27/2023 (Corrected MacOS Application)
+Latest release (12-15-2023): v1.0.1. 
 
 <ins>Download from:</ins> https://files.ccei.udel.edu/p/CKineticsDB/sw/ 
 
